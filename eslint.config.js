@@ -23,6 +23,10 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      // 사용하지 않는 변수 에러로 표시 안함
+      "@typescript-eslint/no-unused-vars":"off",
+      // 명시적으로 any타입을 정의할 수 없도록 막는 것 해제
+      "@typescipt-eslint/no-explicit-any":"off"
     },
   },
 )
