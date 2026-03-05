@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# OneBite Exam - React Study Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19, TypeScript, Vite를 기반으로 한 학습 프로젝트입니다.
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core
 
-## Expanding the ESLint configuration
+- **React 19.1.0** - 최신 React 버전
+- **TypeScript 5.8.3** - 타입 안정성
+- **Vite 6.3.5** - 빠른 빌드 도구
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Styling
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Tailwind CSS v4.2.1** - 유틸리티 기반 CSS 프레임워크
+- **shadcn/ui** - 재사용 가능한 컴포넌트 라이브러리
+- **next-themes** - 다크 모드 지원
+
+### State Management
+
+- **Zustand 5.0.11** - 경량 상태 관리 라이브러리
+  - immer 미들웨어 - 불변성 관리
+  - persist 미들웨어 - 상태 영속화
+  - devtools 미들웨어 - Redux DevTools 통합
+  - subscribeWithSelector - 선택적 상태 구독
+
+### Routing
+
+- **React Router v7.13.1** - SPA 라우팅
+
+### UI Components
+
+- **Radix UI** - 접근성 기반 헤드리스 UI 컴포넌트
+- **Lucide React** - 아이콘 라이브러리
+- **Embla Carousel** - 캐러셀 컴포넌트
+- **Sonner** - 토스트 알림
+
+### Development Tools
+
+- **ESLint** - 코드 품질 관리
+- **Prettier** - 코드 포매팅
+- **TypeScript ESLint** - TypeScript 린팅
+
+## 프로젝트 구조(계속 변경 예정)
+
+```
+onebite-exam/
+├── src/
+│   ├── components/     # 재사용 가능한 컴포넌트
+│   ├── store/          # Zustand 상태 관리
+│   ├── routes/         # 라우트 설정
+│   └── ...
+├── public/             # 정적 파일
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 학습 내용
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ 완료된 학습
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Tailwind CSS v4** - 유틸리티 CSS 기본 설정 및 실습
+2. **shadcn/ui** - 컴포넌트 라이브러리 통합 및 주요 컴포넌트 실습
+3. **React Router v7** - 라우팅 설정 및 구조 구현
+4. **Zustand** - 상태 관리 라이브러리 통합 및 카운터 실습
+5. **Zustand 미들웨어** - immer, persist, devtools, subscribeWithSelector 적용
+
+📝 학습 블로그
+React를 학습하면서 정리한 내용을 블로그에 기록하고 있습니다.
+
+- [[React] 전역 상태 관리와 Zustand](https://velog.io/@melcoding/React-Zustand)
+
+📌 참고 자료
+
+- [React 공식 문서](https://react.dev/)
+- [TypeScript 공식 문서](https://www.typescriptlang.org/docs/)
+- [Shadcn/ui 공식 문서](https://ui.shadcn.com/)
