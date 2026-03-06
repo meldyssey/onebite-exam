@@ -67,7 +67,8 @@ onebite-exam/
 📝 학습 블로그
 React를 학습하면서 정리한 내용을 블로그에 기록하고 있습니다.
 
-- [[React] 전역 상태 관리와 Zustand](https://velog.io/@melcoding/React-Zustand)
+- [[React] 전역 상태 관리와 Zustand](https://velog.io/@melcoding/react-zustand)
+- [[React] Zustand 주요 미들웨어 가이드](https://velog.io/@melcoding/react-zustand-middleware)
 
 📌 참고 자료
 
