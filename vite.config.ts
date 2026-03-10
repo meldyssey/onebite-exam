@@ -11,4 +11,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    watch: {
+      //리액트앱의 파일로 간주하지 않도록(리렌더링 발생하지 않도록) 설정
+      ignored: ["**/server/**"],
+    },
+  },
 });
