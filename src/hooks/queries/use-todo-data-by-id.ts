@@ -1,7 +1,7 @@
 import { fetchTodoById } from "@/api/fetch-todo-by-id";
 import { useQuery } from "@tanstack/react-query";
 
-export function useTodoDataById(id: number) {
+export function useTodoDataById(id: string) {
   return useQuery({
     // id 전달을 위해 화살표 함수로 id값 전달
     queryFn: () => fetchTodoById(id),

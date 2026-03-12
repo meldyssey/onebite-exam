@@ -1,19 +1,45 @@
 {
   "todos": [
     {
-      "id": 1,
+      "id": "1",
       "content": "Todo 1",
       "isDone": true
     },
     {
-      "id": 2,
+      "id": "2",
       "content": "Todo 2",
       "isDone": true
     },
     {
-      "id": 3,
+      "id": "3",
       "content": "Todo 3",
       "isDone": false
+    },
+    {
+      "id": "ce32",
+      "content": "123",
+      "isDone": false
+    },
+    {
+      "id": "cfdc",
+      "content": "1234",
+      "isDone": false
+    },
+    {
+      "id": "32b2",
+      "content": "234",
+      "isDone": false
+    },
+    {
+      "id": "28e9",
+      "content": "345",
+      "isDone": false
+    },
+    {
+      "id": "8175",
+      "content": "345",
+      "isDone": false
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
