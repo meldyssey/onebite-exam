@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { useCreateTodoMutation } from "@/hooks/Mutations/use-create-todo-mutation";
+import { useCreateTodoMutation } from "@/hooks/mutations/use-create-todo-mutation";
 
 export default function TodoEditor() {
   // useMutation 훅으로 상태값까지 관리하기 위해 mutation 활용
