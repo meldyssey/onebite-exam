@@ -9,16 +9,6 @@
       "id": "3788",
       "content": "123",
       "isDone": true
-    },
-    {
-      "id": "1714",
-      "content": "1234",
-      "isDone": false
-    },
-    {
-      "id": "ac45",
-      "content": "12345",
-      "isDone": false
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
