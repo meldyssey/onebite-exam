@@ -13,14 +13,17 @@ export function useCreateTodoMutation() {
     onSettled: () => {},
     // createTodo의 반환값이 onSuccess의 매개변수로 받아올 수 있음
     onSuccess: (newTodo) => {
-      // 해당 쿼리키의 캐시데이터가 일괄 무효됨 => 데이터 리페칭
-      // QueryClient.invalidateQueries({
-      //   queryKey: QUERY_KEYS.todo.list,
-      // });
-      QueryClient.setQueryData<Todo[]>(QUERY_KEYS.todo.list, (prevTodos) => {
-        if (!prevTodos) return [newTodo];
-        return [...prevTodos, newTodo];
-      });
+      QueryClient.setQueryData<Todo>(
+        QUERY_KEYS.todo.detail(newTodo.id),
+        newTodo,
+      );
+      QueryClient.setQueryData<string[]>(
+        QUERY_KEYS.todo.list,
+        (prevTodoIds) => {
+          if (!prevTodoIds) return [newTodo.id];
+          return [...prevTodoIds, newTodo.id];
+        },
+      );
     },
     onError: (error) => {
       window.alert(error.message);
